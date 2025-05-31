@@ -12,7 +12,7 @@ env:
   ty_username: ${{ secrets.USERNAME }}
   ty_password: ${{ secrets.PASSWORD }}
   WXPUSHER_APP_TOKEN : ${{ secrets.WXPUSHER_APP_TOKEN  }}
-  WXPUSHER_UID : ${{ variables.WXPUSHER_APP_TOKEN  }}
+  WXPUSHER_UID : ${{ vars.WXPUSHER_UID  }}
   
 jobs:
   execute-script:
