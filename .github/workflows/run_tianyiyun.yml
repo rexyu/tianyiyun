@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   # 定时触发 (UTC时间每天0点/北京时间8点)
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 2 * * *'
 
 env:
   TZ: "Asia/Shanghai"
