@@ -38,15 +38,6 @@ jobs:
     #   run: pip install -r requirements.txt
 
         
-    - name: 配置环境变量
-      env:
-        TY_USERNAME: ${{ secrets.USERNAME }}
-        TY_PASSWORD: ${{ secrets.PASSWORD }}
-      run: |
-        echo "ty_username=$TY_USERNAME" >> $GITHUB_ENV
-        echo "ty_password=$TY_PASSWORD" >> $GITHUB_ENV
-        echo $GITHUB_ENV
-        
     - name: 执行签到脚本
       run: |
         echo 2222
