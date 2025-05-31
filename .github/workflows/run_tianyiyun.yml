@@ -45,10 +45,11 @@ jobs:
       run: |
         echo "ty_username=$TY_USERNAME" >> $GITHUB_ENV
         echo "ty_password=$TY_PASSWORD" >> $GITHUB_ENV
+        echo $GITHUB_ENV
         
     - name: 执行签到脚本
-      env:
-        ty_username: ${{ env.TY_USERNAME }}
-        ty_password: ${{ env.TY_PASSWORD }}
-      run: python tianyiyun.py
+      run: |
+        echo 2222
+        echo $GITHUB_ENV
+        python tianyiyun.py
 
