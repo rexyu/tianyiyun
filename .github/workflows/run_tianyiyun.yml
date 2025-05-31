@@ -26,6 +26,12 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.x'  # 使用最新的稳定版Python3
+    
+    - name: 安装依赖
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests rsa
+        
 
     # 安装依赖（如有需要）
     # - name: Install dependencies
