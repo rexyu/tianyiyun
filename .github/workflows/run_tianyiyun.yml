@@ -37,6 +37,18 @@ jobs:
     # - name: Install dependencies
     #   run: pip install -r requirements.txt
 
-    # 执行Python脚本
-    - name: Run tianyiyun.py
+        
+    - name: 配置环境变量
+      env:
+        TY_USERNAME: ${{ secrets.USERNAME }}
+        TY_PASSWORD: ${{ secrets.PASSWORD }}
+      run: |
+        echo "ty_username=$TY_USERNAME" >> $GITHUB_ENV
+        echo "ty_password=$TY_PASSWORD" >> $GITHUB_ENV
+        
+    - name: 执行签到脚本
+      env:
+        ty_username: ${{ env.TY_USERNAME }}
+        ty_password: ${{ env.TY_PASSWORD }}
       run: python tianyiyun.py
+
