@@ -1,4 +1,4 @@
-name: Run tianyiyun.py
+name: 天翼签到
 
 on:
   # 允许手动触发
@@ -38,9 +38,23 @@ jobs:
     #   run: pip install -r requirements.txt
 
         
-    - name: 执行签到脚本
+    - name: 执行签到脚本_188
       run: |
-        echo 2222
-        echo $GITHUB_ENV
         python tianyiyun.py
 
+    - name: 执行签到脚本133
+      env:
+        # 直接使用 Secrets 中的值设置环境变量
+        ty_username: ${{ secrets.USERNAME_133 }}
+        ty_password: ${{ secrets.PASSWORD_133 }}
+      run: |
+        python tianyiyun.py
+
+
+    - name: 执行签到脚本134
+      env:
+        # 直接使用 Secrets 中的值设置环境变量
+        ty_username: ${{ secrets.USERNAME_134 }}
+        ty_password: ${{ secrets.PASSWORD_134 }}
+      run: |
+        python tianyiyun.py
